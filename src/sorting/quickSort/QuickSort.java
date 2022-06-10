@@ -9,7 +9,7 @@ public class QuickSort extends genericSorting {
 
     private static <Item extends Comparable<Item>> void sort(Item[] a, int low, int high) {
         //Breche bei elementaren Teillisten ab
-        if (high < low) {
+        if (high <= low) {
             return;
         }
         //Trenne in zwei teillisten auf
@@ -23,7 +23,7 @@ public class QuickSort extends genericSorting {
         int i = low;
         int j = high + 1;
         // Pivotelemement an erster Position --> naiv
-        Item pivotElement = a[i];
+        Item pivotElement = a[low];
         while (true) {
             // Inkrementiere den i Pointer, solange a[i] < pivotElement
             while (less(a[++i], pivotElement)) {
