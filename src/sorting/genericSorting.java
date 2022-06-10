@@ -27,4 +27,24 @@ public abstract class genericSorting {
         }
     }
 
+    public static <T extends Comparable<T>> int medianOfThree(T[] arr) {
+
+        int lowIdx = 0;
+        int highIdx = arr.length;
+        int midIdx = arr.length / 2;
+
+        T low = arr[lowIdx];
+        T high = arr[highIdx];
+        T mid = arr[midIdx];
+
+
+        if (low.compareTo(mid) > 0 ^ low.compareTo(high) > 0) {
+            return lowIdx;
+        } else if (mid.compareTo(low) < 0 ^ mid.compareTo(high) < 0) {
+            return midIdx;
+        } else {
+            return highIdx;
+        }
+    }
+
 }
