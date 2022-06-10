@@ -2,7 +2,7 @@ package sorting.mergeSort;
 
 import sorting.genericSorting;
 
-public class mergeSort extends genericSorting {
+public class MergeSort extends genericSorting {
     private static Comparable[] aux;
 
     public static <T extends Comparable<T>> void merge(Comparable[] a, int low, int mid, int high) {
