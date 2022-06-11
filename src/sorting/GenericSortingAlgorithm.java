@@ -1,6 +1,6 @@
 package sorting;
 
-public abstract class genericSorting {
+public abstract class GenericSortingAlgorithm<Item extends Comparable<Item>> {
 
     protected static <T extends Comparable<T>> void exchange(T[] arr, int first, int second) {
         T temp = arr[first];
@@ -36,7 +36,6 @@ public abstract class genericSorting {
         T low = arr[lowIdx];
         T high = arr[highIdx];
         T mid = arr[midIdx];
-
 
         if (low.compareTo(mid) > 0 ^ low.compareTo(high) > 0) {
             return lowIdx;
