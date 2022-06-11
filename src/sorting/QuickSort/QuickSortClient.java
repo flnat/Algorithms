@@ -1,7 +1,6 @@
 package sorting.QuickSort;
 
 import sorting.ISort;
-import sorting.InsertionSort.InsertionSort;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -30,7 +29,7 @@ public class QuickSortClient {
         Map<Integer, Double> runTimeMapping = new LinkedHashMap<>();
         ISort<Integer> quickSort = new QuickSort<>();
         // Configure Testsizes
-        for (int i = 1000; i <= 1_000_000; i *= 10) {
+        for (int i = 1000; i <= 100000; i *= 10) {
             runTimeMapping.put(i, threadedMeanRunTime(quickSort, i, 5));
         }
         String formattedResults = formatResults(runTimeMapping);

@@ -82,7 +82,7 @@ public class ClientUtils {
 
     public static String formatResults(Map<Integer, Double> runTimeMapping) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("n\t\t|Time in Seconds\n");
+        stringBuilder.append("n\t\t|Time in seconds\n");
         stringBuilder.append("-".repeat(15));
         stringBuilder.append("\n");
         for (Entry<Integer, Double> entry : runTimeMapping.entrySet()) {

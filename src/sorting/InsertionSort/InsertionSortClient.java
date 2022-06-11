@@ -14,7 +14,7 @@ public class InsertionSortClient {
         Map<Integer, Double> runTimeMapping = new LinkedHashMap<>();
         ISort<Integer> insertionSort = new InsertionSort<>();
         // Configure Testsizes
-        for (int i = 1000; i <= 1_000_000; i *= 10) {
+        for (int i = 1000; i <= 100_000; i *= 10) {
             runTimeMapping.put(i, threadedMeanRunTime(insertionSort, i, 5));
         }
         String formattedResults = formatResults(runTimeMapping);
