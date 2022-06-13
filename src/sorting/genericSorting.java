@@ -12,6 +12,10 @@ public abstract class genericSorting {
         return a.compareTo(b) < 0;
     }
 
+    protected static <T extends Comparable<T>> boolean greater(T a, T b) {
+        return a.compareTo(b) > 0;
+    }
+
     public static <T extends Comparable<T>> boolean isSorted(T[] arr) {
         for (int i = 1; i < arr.length; i++) {
             if (arr[i].compareTo(arr[i - 1]) > 0) {
@@ -36,7 +40,6 @@ public abstract class genericSorting {
         T low = arr[lowIdx];
         T high = arr[highIdx];
         T mid = arr[midIdx];
-
 
         if (low.compareTo(mid) > 0 ^ low.compareTo(high) > 0) {
             return lowIdx;
