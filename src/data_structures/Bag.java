@@ -1,6 +1,6 @@
 package data_structures;
 
-import java.util.Iterator;;
+import java.util.Iterator;
 
 public class Bag<Item> implements Iterable<Item> {
 
@@ -9,29 +9,32 @@ public class Bag<Item> implements Iterable<Item> {
     private class Node {
         Item item;
         Node next;
+
+        Node() {
+        }
+
+        Node(Item item, Node node) {
+            this.item = item;
+            this.next = node;
+        }
+
     }
-    public Bag(){}
 
-    public Bag(Item item){
-        this.first = new Node();
-        this.first.item = item;
-        this.first.next = null; 
+    public Bag() {
     }
 
-    public Bag(Iterable<Item> items){
-
-        for (Item item: items){
+    public Bag(Iterable<Item> items) {
+        for (Item item : items) {
             add(item);
         }
     }
 
     public void add(Item item) {
-        Node oldfirst = first;
-        first = new Node();
-        first.item = item;
-        first.next = oldfirst;
+        Node oldfirst = this.first;
+        first = new Node(item, oldfirst);
     }
 
+    @Override
     public Iterator<Item> iterator() {
         return new ListIterator();
     }
@@ -44,7 +47,6 @@ public class Bag<Item> implements Iterable<Item> {
         }
 
         public void remove() {
-
         }
 
         public Item next() {
@@ -52,7 +54,6 @@ public class Bag<Item> implements Iterable<Item> {
             current = current.next;
             return item;
         }
-
     }
 
 }
