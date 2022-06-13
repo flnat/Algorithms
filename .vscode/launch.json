@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DijkstraSPClient",
+            "request": "launch",
+            "mainClass": "Graphs.DijkstraSPClient",
+            "projectName": "AlDA_6dfba9a"
+        },
+        {
+            "type": "java",
             "name": "Launch HeapSortClient",
             "request": "launch",
             "mainClass": "sorting.HeapSort.HeapSortClient",
