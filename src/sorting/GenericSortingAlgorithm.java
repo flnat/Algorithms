@@ -1,6 +1,6 @@
 package sorting;
 
-public abstract class genericSorting {
+public abstract class GenericSortingAlgorithm<Item extends Comparable<Item>> {
 
     protected static <T extends Comparable<T>> void exchange(T[] arr, int first, int second) {
         T temp = arr[first];

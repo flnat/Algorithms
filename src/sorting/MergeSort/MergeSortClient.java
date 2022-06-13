@@ -1,4 +1,4 @@
-package sorting.mergeSort;
+package sorting.MergeSort;
 
 import static utils.ClientUtils.*;
 import edu.princeton.cs.algs4.Stopwatch;

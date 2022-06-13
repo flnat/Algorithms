@@ -1,9 +1,9 @@
-package sorting.selectionSort;
+package sorting.SelectionSort;
 
 
-import sorting.genericSorting;
+import sorting.GenericSortingAlgorithm;
 
-public class selectionSort extends genericSorting {
+public class SelectionSort extends GenericSortingAlgorithm {
     public static <T extends Comparable<T>> void sort(T[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {

@@ -1,18 +1,20 @@
-package sorting.quickSort;
+package sorting.QuickSort;
 
-import sorting.genericSorting;
+import sorting.GenericSortingAlgorithm;
+import sorting.ISort;
 
-public class QuickSort extends genericSorting {
-    public static <Item extends Comparable<Item>> void sort(Item[] a) {
+public class QuickSort<Item extends Comparable<Item>> extends GenericSortingAlgorithm<Item> implements ISort<Item> {
+    @Override
+    public void sort(Item[] a) {
         sort(a, 0, a.length - 1);
     }
 
     private static <Item extends Comparable<Item>> void sort(Item[] a, int low, int high) {
-        //Breche bei elementaren Teillisten ab
+        // Breche bei elementaren Teillisten ab
         if (high <= low) {
             return;
         }
-        //Trenne in zwei teillisten auf
+        // Trenne in zwei teillisten auf
         int j = partition(a, low, high);
         sort(a, low, j - 1);
         sort(a, j + 1, high);

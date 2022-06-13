@@ -1,8 +1,8 @@
-package sorting.mergeSort;
+package sorting.MergeSort;
 
-import sorting.genericSorting;
+import sorting.GenericSortingAlgorithm;
 
-public class MergeSort extends genericSorting {
+public class MergeSort extends GenericSortingAlgorithm {
     private static Comparable[] aux;
     
     public static void sort(Comparable[] a){
