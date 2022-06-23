@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.ShortestPath;
 
 import Graphs.data_scructures.Digraph;
 import Graphs.data_scructures.DirectedEdge;
